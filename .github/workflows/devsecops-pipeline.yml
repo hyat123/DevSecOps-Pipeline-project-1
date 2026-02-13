@@ -1,4 +1,3 @@
-cat > .github/workflows/devsecops-pipeline.yml << 'EOF'
 name: DevSecOps Pipeline
 
 on:
@@ -158,4 +157,3 @@ jobs:
           echo "| IaC Scanning | ${{ needs.iac-scanning.result }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Secret Detection | ${{ needs.secret-scanning.result }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Container Scan | ${{ needs.container-scanning.result }} |" >> $GITHUB_STEP_SUMMARY
-EOF
