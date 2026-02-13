@@ -5,13 +5,12 @@ on:
     branches: [ main, develop ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:
+  workflow_dispatch:  # Allows manual trigger
 
 env:
   PYTHON_VERSION: '3.9'
 
 jobs:
-
   # ==========================================
   # SAST - Static Application Security Testing
   # ==========================================
