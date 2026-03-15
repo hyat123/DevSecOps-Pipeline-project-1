@@ -1,4 +1,3 @@
-cat > Dockerfile << 'EOF'
 # Vulnerable Dockerfile - For Educational Purposes
 # Contains intentional security misconfigurations
 
