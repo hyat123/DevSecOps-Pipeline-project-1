@@ -43,6 +43,9 @@ jobs:
   sca-trivy:
     name: SCA - Dependency Scanning
     runs-on: ubuntu-latest
+    permissions:
+       contents: read
+       security-events: write
 
     steps:
       - name: Checkout repository
