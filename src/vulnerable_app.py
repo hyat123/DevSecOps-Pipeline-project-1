@@ -41,9 +41,9 @@ def ping():
 def greet():
     """Vulnerable to SSTI attacks."""
     name = request.args.get('name', 'Guest')
-    # BAD: User input in template string
-    template = f"<h1>Hello {name}!</h1>"
-    return render_template_string(template)
+    # GOOD: Use a constant template and pass untrusted data as context
+    template = "<h1>Hello {{ name }}!</h1>"
+    return render_template_string(template, name=name)
 
 # Vulnerability 5: Insecure Deserialization
 @app.route('/load_config')

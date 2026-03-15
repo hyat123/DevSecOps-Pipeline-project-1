@@ -1,4 +1,3 @@
-cat > Dockerfile << 'EOF'
 # Vulnerable Dockerfile - For Educational Purposes
 # Contains intentional security misconfigurations
 
@@ -29,4 +28,3 @@ EXPOSE 5000
 
 # Vulnerability 5: Using shell form (not exec form)
 CMD python src/vulnerable_app.py
-EOF
