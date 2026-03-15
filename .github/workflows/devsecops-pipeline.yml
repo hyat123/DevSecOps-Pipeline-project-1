@@ -69,6 +69,10 @@ jobs:
   iac-scanning:
     name: IaC - Terraform Security
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
 
     steps:
       - name: Checkout repository
